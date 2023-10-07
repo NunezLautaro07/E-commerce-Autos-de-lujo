@@ -1,0 +1,19 @@
+
+.back{
+height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+.margen-derecha{padding-right: 10px;}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+h1{font-family: 'Shrikhand', cursive;}
+p{font-family: 'Shrikhand', cursive;}
