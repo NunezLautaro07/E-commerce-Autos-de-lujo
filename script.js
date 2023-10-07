@@ -68,10 +68,23 @@ function renderizarCompras() {
   offcanva.innerHTML = "";
   for (const c of compras) {
     const item = document.createElement("div");
-    item.innerText = c.nombre + "  " + c.precio
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.classList.add("btn-close");
+    closeButton.setAttribute("aria-label", "Close");
+    
+    item.innerHTML = `${c.nombre}  ${c.precio}  `;
+    item.appendChild(closeButton);
+
+    closeButton.addEventListener("click", () => {
+      sacar(c);
+      renderizarCompras();
+    });
+
     offcanva.appendChild(item);
   }
 }
+
 
 // Ejecuciones
 var nombres_productos = [
