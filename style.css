@@ -14,7 +14,9 @@ height: 600px;
     width: 70%;
     max-width: 1200px;
     padding: 0 15px;
+   
 }
+img{object-fit: cover;}
 h1{font-family: 'Shrikhand', cursive;}
 p{font-family: 'Shrikhand', cursive;}
 
