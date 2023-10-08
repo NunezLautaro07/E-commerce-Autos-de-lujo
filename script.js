@@ -66,14 +66,22 @@ class Producto {
 // Funciones
 function renderizarCompras() {
   offcanva.innerHTML = "";
+
   for (const c of compras) {
     const item = document.createElement("div");
     const closeButton = document.createElement("button");
     closeButton.type = "button";
     closeButton.classList.add("btn-close");
     closeButton.setAttribute("aria-label", "Close");
-    
-    item.innerHTML = `${c.nombre}  ${c.precio}  `;
+
+  
+    const imagen = document.createElement("img");
+    imagen.src = c.imagen; 
+    imagen.style.width = "44px";
+    item.appendChild(imagen);
+
+    // Agregar el resto de la información (nombre, precio) al elemento item
+    item.innerHTML += `${c.nombre} ${c.precio} `;
     item.appendChild(closeButton);
 
     closeButton.addEventListener("click", () => {
@@ -84,7 +92,6 @@ function renderizarCompras() {
     offcanva.appendChild(item);
   }
 }
-
 
 // Ejecuciones
 var nombres_productos = [
